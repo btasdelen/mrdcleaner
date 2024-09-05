@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mrdcleaner"
+version = "0.1"
+authors = [{ name = "Bilal Tasdelen"}]
+description = "MRD dataset cleaner util."
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+	"ismrmrd",
+	"PySide6",
+]
+
+[project.urls]
+Homepage = "https://github.com/btasdelen/mrdcleaner"
+
+[project.gui-scripts]
+mrdcleaner = "mrdcleaner:main"
+

@@ -106,7 +106,7 @@ class FileWidget(QtWidgets.QWidget):
         popup.exec()
     
     def _delete_waveform_by_idx(self, item, idx):
-        print(f'Deleting waveform {idx} from {'/'.join(item[1:])}')
+        print(f"Deleting waveform {idx} from {'/'.join(item[1:])}")
         with h5py.File(item[0], mode='r+') as f:
             wfs = f['/'.join(item[1:]) + '/waveforms']
             wfs2 = []
